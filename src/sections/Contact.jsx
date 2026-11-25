@@ -120,7 +120,9 @@ export default function Contact() {
         setStatus({ type: null, message: "" });
 
         try {
-            const response = await fetch("http://localhost:4141/api/v1/contact", {
+            const API_URL = import.meta.env.VITE_API_URL;
+
+            const response = await fetch(`${API_URL}/api/v1/contact`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -390,11 +392,10 @@ export default function Contact() {
 
                             {status.message && (
                                 <div
-                                    className={`contact-status-banner ${
-                                        status.type === "success"
+                                    className={`contact-status-banner ${status.type === "success"
                                             ? "is-success"
                                             : "is-error"
-                                    }`}
+                                        }`}
                                     role="alert"
                                 >
                                     {status.type === "success" ? (
