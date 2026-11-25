@@ -100,10 +100,12 @@ export default function TechText({
       // Responsive base upper-limit font size
       const screenWidth = typeof window !== "undefined" ? window.innerWidth : 1200;
       let calculatedFontSize = fontSize;
-      if (screenWidth < 480) {
-        calculatedFontSize = Math.min(calculatedFontSize, 52);
+      if (screenWidth < 360) {
+        calculatedFontSize = Math.min(calculatedFontSize, 40);
+      } else if (screenWidth < 480) {
+        calculatedFontSize = Math.min(calculatedFontSize, 48);
       } else if (screenWidth < 768) {
-        calculatedFontSize = Math.min(calculatedFontSize, 72);
+        calculatedFontSize = Math.min(calculatedFontSize, 66);
       } else if (screenWidth < 1200) {
         calculatedFontSize = Math.min(calculatedFontSize, 96);
       }
@@ -111,7 +113,7 @@ export default function TechText({
       const lines = text.split("\n");
 
       // Measure text width using actual canvas metrics to GUARANTEE no clipping of letters like 'H' and 'I'
-      const safeWidth = Math.max(60, width - 16); // 16px safety margin for left/right edges
+      const safeWidth = Math.max(50, width - 12);
       ctx.font = `${fontWeight} ${calculatedFontSize}px ${fontFamily}`;
 
       let maxLineWidth = 0;
@@ -126,15 +128,15 @@ export default function TechText({
 
       // If measured line width exceeds safe container width, scale font size down proportionally
       if (maxLineWidth > safeWidth && maxLineWidth > 0) {
-        calculatedFontSize = Math.max(22, Math.floor(calculatedFontSize * (safeWidth / maxLineWidth)));
+        calculatedFontSize = Math.max(18, Math.floor(calculatedFontSize * (safeWidth / maxLineWidth)));
         ctx.font = `${fontWeight} ${calculatedFontSize}px ${fontFamily}`;
       }
 
       // Also ensure height fits container safely
       const lineHeights = calculatedFontSize * lineHeight;
       const totalTextHeight = lines.length * lineHeights;
-      if (totalTextHeight > height - 12 && height > 60) {
-        calculatedFontSize = Math.max(22, Math.floor(calculatedFontSize * ((height - 12) / totalTextHeight)));
+      if (totalTextHeight > height - 8 && height > 40) {
+        calculatedFontSize = Math.max(18, Math.floor(calculatedFontSize * ((height - 8) / totalTextHeight)));
         ctx.font = `${fontWeight} ${calculatedFontSize}px ${fontFamily}`;
       }
 

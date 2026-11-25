@@ -103,7 +103,7 @@ export default function Navbar({ theme, onToggleTheme }) {
                 }}
               >
                 {item.label}
-                {isActive && <span className="nav-active-pill" layoutId="activeNav" />}
+                {isActive && <span className="nav-active-pill" />}
               </a>
             );
           })}

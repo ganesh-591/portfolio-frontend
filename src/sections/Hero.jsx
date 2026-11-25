@@ -149,7 +149,7 @@ export default function Hero({ theme }) {
         { opacity: 1, scale: 1, duration: 0.9 }
       )
         .fromTo(
-          ".hud-hero-title",
+          ".hud-hero-title-tech-wrapper",
           { opacity: 0, y: 35 },
           { opacity: 1, y: 0, duration: 0.7 },
           "-=0.5"

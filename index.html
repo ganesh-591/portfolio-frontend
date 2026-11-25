@@ -10,6 +10,25 @@
     <meta name="theme-color" content="#0B0B0D" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ganesh Kopparthi | Java Full Stack Developer</title>
+    <!-- Prevent theme flash (FOUC) and ensure immediate scroll reset on refresh -->
+    <script>
+      (function() {
+        try {
+          if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+          }
+          window.scrollTo(0, 0);
+
+          var saved = localStorage.getItem('portfolio-theme');
+          var theme = saved === 'light' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', theme);
+          document.documentElement.classList.add(theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

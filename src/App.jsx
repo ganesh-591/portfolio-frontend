@@ -15,11 +15,29 @@ function App() {
     try {
       const saved = localStorage.getItem("portfolio-theme");
       if (saved === "light" || saved === "dark") return saved;
-      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      return "dark"; // Default to dark theme on first visit
     } catch {
       return "dark";
     }
   });
+
+  // Ensure scroll position resets to Hero on load/refresh and disable automatic restoration
+  useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+    window.scrollTo(0, 0);
+
+    const handleBeforeUnload = () => {
+      window.scrollTo(0, 0);
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, []);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
