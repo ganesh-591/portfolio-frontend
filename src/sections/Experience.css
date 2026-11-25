@@ -1,0 +1,480 @@
+/* =========================================================
+   EXPERIENCE SECTION — EDITORIAL TWO-COLUMN SHOWCASE
+   Strict monochrome styling, balanced typography & hierarchy
+   ========================================================= */
+
+/* ---------- Main section ---------- */
+
+.experience-section {
+    position: relative;
+    width: 100%;
+    padding: 25px 5% 100px;
+    background: var(--hero-bg);
+    color: var(--hero-text);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.experience-container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* ---------- Topline ---------- */
+
+.experience-topline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--hero-border);
+    color: var(--hero-muted);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+}
+
+/* ---------- Header Grid ---------- */
+
+.experience-header-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 40px;
+    align-items: center;
+    padding: 35px 0 45px;
+}
+
+.experience-heading {
+    padding-top: 0;
+}
+
+.experience-eyebrow {
+    margin: 0 0 20px;
+    color: var(--hero-muted);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.experience-heading h2 {
+    margin: 0;
+    font-size: clamp(58px, 9vw, 120px);
+    line-height: 0.9;
+    letter-spacing: -5px;
+    font-weight: 800;
+    color: var(--hero-text);
+}
+
+.experience-heading h2 span {
+    color: var(--hero-muted);
+}
+
+.experience-intro {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+.experience-intro p {
+    max-width: 440px;
+    margin: 0;
+    color: var(--hero-secondary-text);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* =========================================================
+   EDITORIAL TWO-COLUMN SHOWCASE CARD
+   ========================================================= */
+
+.experience-showcase-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.35fr 0.65fr;
+    gap: clamp(35px, 5vw, 65px);
+    padding: clamp(35px, 5vw, 60px);
+    border: 1px solid var(--hero-border);
+    border-radius: 24px;
+    background: var(--hero-surface);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+    transition: border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.experience-showcase-card:hover {
+    border-color: var(--hero-muted);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.16);
+}
+
+/* ---------- Shared Sublabel ---------- */
+
+.exp-sublabel {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--hero-muted);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+/* =========================================================
+   LEFT COLUMN: Organization, Timeline & Meta
+   ========================================================= */
+
+.exp-left-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+    padding-right: clamp(20px, 4vw, 50px);
+    border-right: 1px solid var(--hero-border);
+}
+
+.exp-meta-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.exp-num {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--hero-muted);
+    font-family: monospace;
+}
+
+.exp-type-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--hero-border);
+    background: rgba(139, 142, 141, 0.12);
+    color: var(--hero-text);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.exp-company-block {
+    margin-top: 10px;
+}
+
+.exp-company-name {
+    margin: 0;
+    font-size: clamp(22px, 2.8vw, 30px);
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    color: var(--hero-text);
+}
+
+.exp-duration-block {
+    margin-top: 5px;
+}
+
+.exp-duration-value {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--hero-secondary-text);
+    font-size: 13.5px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.exp-tenure-tag {
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.exp-tenure-tag span {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--hero-border);
+    background: transparent;
+    color: var(--hero-muted);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   RIGHT COLUMN: Role, Specialization, Responsibilities & Tech
+   ========================================================= */
+
+.exp-right-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- Role Header ---------- */
+
+.exp-role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.exp-role-title {
+    margin: 0 0 10px;
+    font-size: clamp(28px, 3.8vw, 42px);
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    color: var(--hero-text);
+}
+
+.exp-spec-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.exp-specialization-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--hero-border);
+    background: rgba(139, 142, 141, 0.14);
+    color: var(--hero-text);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.exp-location-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--hero-muted);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.exp-arrow-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--hero-muted);
+    transition: transform 0.3s ease, color 0.3s ease;
+    flex-shrink: 0;
+    padding-top: 4px;
+}
+
+.experience-showcase-card:hover .exp-arrow-mark {
+    transform: translate(5px, -5px);
+    color: var(--hero-text);
+}
+
+/* ---------- Divider ---------- */
+
+.exp-inner-divider {
+    height: 1px;
+    width: 100%;
+    background: var(--hero-border);
+    margin: 26px 0 28px;
+}
+
+/* =========================================================
+   RESPONSIBILITIES — BULLET STYLE
+   No numbering or horizontal row separators
+   ========================================================= */
+
+.exp-contributions-section {
+    margin-bottom: 28px;
+}
+
+.exp-resp-table {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.exp-resp-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 0;
+    border: none;
+}
+
+.exp-resp-dot {
+    width: 7px;
+    height: 7px;
+    min-width: 7px;
+    margin-top: 9px;
+    border-radius: 50%;
+    background: var(--hero-muted);
+    transition: background 0.25s ease;
+}
+
+.exp-resp-row:hover .exp-resp-dot {
+    background: var(--hero-text);
+}
+
+.exp-resp-text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--hero-secondary-text);
+    transition: color 0.25s ease;
+}
+
+.exp-resp-row:hover .exp-resp-text {
+    color: var(--hero-text);
+}
+
+/* ---------- Core Technologies Tags ---------- */
+
+.exp-tech-section {
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--hero-border);
+}
+
+.exp-tech-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.exp-tech-chip {
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--hero-border);
+    background: transparent;
+    color: var(--hero-secondary-text);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    transition:
+        border-color 0.25s ease,
+        color 0.25s ease,
+        background 0.25s ease;
+}
+
+.exp-tech-chip:hover {
+    border-color: var(--hero-muted);
+    color: var(--hero-text);
+    background: rgba(139, 142, 141, 0.1);
+}
+
+/* ---------- Bottom Note ---------- */
+
+.experience-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    color: var(--hero-muted);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.experience-bottom span:last-child {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 960px) {
+    .experience-header-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .experience-intro {
+        justify-content: flex-start;
+    }
+
+    .experience-showcase-card {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 35px 28px;
+    }
+
+    .exp-left-col {
+        padding-right: 0;
+        border-right: none;
+        border-bottom: 1px solid var(--hero-border);
+        padding-bottom: 30px;
+        gap: 24px;
+    }
+
+    .exp-tenure-tag {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .experience-section {
+        padding: 75px 6%;
+    }
+
+    .experience-header-grid {
+        padding: 45px 0 35px;
+    }
+
+    .experience-heading h2 {
+        font-size: clamp(40px, 12vw, 65px);
+        letter-spacing: -2px;
+    }
+
+    .experience-showcase-card {
+        padding: 28px 18px;
+        border-radius: 18px;
+    }
+
+    .exp-role-title {
+        font-size: 24px;
+        letter-spacing: -0.8px;
+    }
+
+    .exp-resp-row {
+        gap: 12px;
+    }
+
+    .exp-resp-dot {
+        width: 6px;
+        height: 6px;
+        min-width: 6px;
+        margin-top: 8px;
+    }
+
+    .exp-resp-text {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .experience-bottom {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
+
+/* ---------- Reduced Motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .experience-showcase-card,
+    .exp-arrow-mark,
+    .exp-resp-row,
+    .exp-tech-chip {
+        transition: none !important;
+    }
+}

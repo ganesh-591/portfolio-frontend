@@ -1,0 +1,579 @@
+/* ---------- Main section ---------- */
+
+.about-section {
+    position: relative;
+    width: 100%;
+    padding: 45px 5% 100px;
+    background: var(--hero-bg);
+    color: var(--hero-text);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.about-container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* ---------- Section header ---------- */
+
+.about-topline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--hero-border);
+}
+
+.about-topline span {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--hero-muted);
+}
+
+/* ---------- Main panel ---------- */
+
+.about-glass-panel {
+    position: relative;
+    padding: 55px;
+    border: 1px solid var(--hero-border);
+    border-radius: 24px;
+    background: var(--about-glass);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: none;
+    overflow: hidden;
+    isolation: isolate;
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.about-glass-panel::before,
+.about-glass-panel::after,
+.about-section::before,
+.about-section::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* ---------- Main heading ---------- */
+
+.about-heading {
+    padding: 0 0 45px;
+}
+
+.about-eyebrow {
+    margin: 0 0 20px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: var(--hero-muted);
+    text-transform: uppercase;
+}
+
+.about-heading h2 {
+    margin: 0;
+    font-size: clamp(58px, 8vw, 115px);
+    line-height: 0.9;
+    letter-spacing: -5px;
+    font-weight: 800;
+    color: var(--hero-text);
+}
+
+.about-heading h2 span {
+    color: var(--hero-muted);
+}
+
+/* ---------- Main content grid ---------- */
+
+.about-main-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* ---------- Inner cards ---------- */
+
+.about-glass-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 30px;
+    border: 1px solid var(--hero-border);
+    border-radius: 18px;
+    background: var(--about-card);
+    box-shadow: none;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.about-glass-card::before,
+.about-glass-card::after {
+    content: none !important;
+    display: none !important;
+}
+
+.about-glass-card>* {
+    position: relative;
+    z-index: 1;
+}
+
+.about-glass-card:hover {
+    border-color: var(--hero-muted);
+}
+
+/* ---------- Labels ---------- */
+
+.about-label {
+    display: block;
+    margin-bottom: 18px;
+    color: var(--hero-muted);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+/* ---------- Introduction ---------- */
+
+.about-description {
+    max-width: 700px;
+    margin: 25px 0 18px;
+    color: var(--hero-text);
+    font-size: clamp(17px, 1.5vw, 21px);
+    line-height: 1.8;
+}
+
+.about-description strong {
+    font-weight: 800;
+}
+
+.about-description.secondary {
+    margin-top: 20px;
+    color: var(--hero-secondary-text);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* ---------- CTA ---------- */
+
+.about-actions-cluster {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.about-project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--hero-text);
+    color: var(--hero-text);
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+}
+
+.about-project-link:hover {
+    gap: 18px;
+    border-color: var(--hero-accent);
+}
+
+.about-resume-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 999px;
+    color: var(--hero-text);
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+.about-resume-link:hover {
+    color: var(--hero-text);
+    border-color: var(--hero-accent);
+    background: rgba(139, 142, 141, 0.18);
+    box-shadow: 0 0 16px rgba(139, 142, 141, 0.25);
+    transform: translateY(-2px);
+}
+
+/* ---------- Education ---------- */
+
+.about-education {
+    position: relative;
+    top: -250px;
+}
+
+.about-education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.education-count {
+    color: var(--hero-muted);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.education-card {
+    padding: 23px 0;
+    border-bottom: 1px solid var(--hero-border);
+}
+
+.education-card:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.education-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.education-year,
+.education-number {
+    color: var(--hero-muted);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.education-card h3 {
+    margin: 13px 0 8px;
+    color: var(--hero-text);
+    font-size: 18px;
+}
+
+.education-card p {
+    margin: 0;
+    color: var(--hero-secondary-text);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.education-score {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--hero-muted);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* ---------- Technical focus ---------- */
+
+.about-focus {
+    margin-top: 30px;
+    padding: 30px;
+    border: 1px solid var(--hero-border);
+    border-radius: 18px;
+    background: var(--about-card);
+    transition: background 0.3s ease;
+}
+
+.focus-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--hero-border);
+}
+
+.focus-heading .about-label {
+    margin: 0;
+}
+
+.focus-caption {
+    color: var(--hero-muted);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 10px;
+}
+
+.focus-card {
+    position: relative;
+    min-height: 190px;
+    padding: 23px 22px;
+    border: none;
+    border-right: 1px solid var(--hero-border);
+    border-bottom: 1px solid var(--hero-border);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    transition: transform 0.3s ease;
+}
+
+.focus-card:last-child {
+    border-right: none;
+}
+
+.focus-card:hover {
+    transform: translateY(-3px);
+    background: transparent;
+}
+
+.focus-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--hero-muted);
+}
+
+.focus-card-top span {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.focus-card h3 {
+    margin: 32px 0 10px;
+    color: var(--hero-text);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.focus-card p {
+    max-width: 300px;
+    margin: 0;
+    color: var(--hero-secondary-text);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.focus-arrow {
+    display: none;
+}
+
+/* ---------- Dark theme ---------- */
+
+[data-theme="dark"],
+.dark {
+    --about-glass: #141414;
+    --about-card: #202020;
+    --about-card-hover: #292929;
+    --about-shadow: none;
+}
+
+/* ---------- Light theme ---------- */
+
+[data-theme="light"] {
+    --about-glass: #4D4F51;
+    --about-card: #545658;
+    --about-card-hover: #5C5E60;
+    --about-shadow: none;
+}
+
+/* Light theme panel */
+
+[data-theme="light"] .about-section .about-glass-panel {
+    background: #4D4F51;
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Light theme inner cards */
+
+[data-theme="light"] .about-section .about-glass-card {
+    background: #545658;
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: none;
+}
+
+/* Light theme focus */
+
+[data-theme="light"] .about-section .about-focus {
+    background: #545658;
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Dark theme panel */
+
+[data-theme="dark"] .about-section .about-glass-panel,
+.dark .about-section .about-glass-panel {
+    background: #141414;
+    border-color: rgba(255, 255, 255, 0.16);
+}
+
+/* Dark theme inner cards */
+
+[data-theme="dark"] .about-section .about-glass-card,
+.dark .about-section .about-glass-card {
+    background: #202020;
+    border-color: rgba(255, 255, 255, 0.14);
+    box-shadow: none;
+}
+
+/* Dark theme focus */
+
+[data-theme="dark"] .about-section .about-focus,
+.dark .about-section .about-focus {
+    background: #1b1b1b;
+    border-color: rgba(255, 255, 255, 0.14);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1000px) {
+    .about-glass-panel {
+        padding: 35px;
+    }
+
+    .about-main-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .about-glass-card {
+        padding: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 40px 6% 75px;
+    }
+
+    .about-glass-panel {
+        padding: 22px;
+        border-radius: 18px;
+    }
+
+    .about-heading {
+        padding-bottom: 30px;
+    }
+
+    .about-heading h2 {
+        font-size: clamp(48px, 11vw, 75px);
+        letter-spacing: -3px;
+    }
+
+    .about-main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-glass-card {
+        padding: 22px;
+    }
+
+    .about-education {
+        top: 0;
+    }
+
+    .about-description {
+        font-size: 17px;
+    }
+
+    .focus-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .focus-card {
+        min-height: auto;
+        padding: 24px 0;
+        border-right: none;
+    }
+
+    .focus-card h3 {
+        margin-top: 22px;
+    }
+
+    .about-focus {
+        padding: 20px;
+    }
+
+    .focus-caption {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-topline span {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .about-glass-panel {
+        padding: 16px;
+    }
+
+    .about-heading h2 {
+        font-size: 43px;
+        letter-spacing: -2px;
+    }
+
+    .about-education-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .focus-heading {
+        align-items: flex-start;
+    }
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .about-section *,
+    .about-section *::before,
+    .about-section *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* ---------- Remove unwanted glow ---------- */
+
+.about-section .about-glass-panel::before,
+.about-section .about-glass-panel::after,
+.about-section .about-glass-card::before,
+.about-section .about-glass-card::after {
+    content: none !important;
+    display: none !important;
+}
+
+.about-section .about-glass-panel,
+.about-section .about-glass-card {
+    box-shadow: none;
+    background-image: none;
+    filter: none;
+}
+
+/* Reduce unnecessary bottom space in Introduction card */
+
+.about-intro {
+    align-self: start;
+    height: fit-content;
+    min-height: unset;
+    padding-bottom: 30px;
+}

@@ -1,0 +1,57 @@
+/* =========================================================
+   CUSTOM CURSOR OVERRIDE - NATIVE CURSOR RESTORATION
+   Neutralizes custom trailing follower and restores default
+   browser cursor behavior cleanly across all components.
+   ========================================================= */
+
+.custom-cursor-container,
+.cursor-dot,
+.cursor-ring,
+.cursor-label {
+  display: none !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Ensure the browser's native mouse cursor remains visible and active */
+html,
+body,
+.cyber-cockpit-hero,
+.cyber-cockpit-hero a,
+.cyber-cockpit-hero button,
+* {
+  cursor: auto !important;
+}
+
+/* Standard clickable elements show the native pointer hand */
+a,
+button,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+.cockpit-primary-pill-btn,
+.cockpit-secondary-pill-btn,
+.cockpit-resume-btn,
+.whatsapp-floating-btn,
+.nav-cta-btn,
+.nav-mobile-toggle,
+.theme-toggle-btn,
+.project-card,
+.project-card a,
+.tech-tag {
+  cursor: pointer !important;
+}
+
+/* Form inputs retain text selection cursor */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea {
+  cursor: text !important;
+}
